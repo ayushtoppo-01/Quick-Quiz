@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Math</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">+</span> QUICK MATH</div>
+      <div class="scoreboard" aria-live="polite">
+        <div><span class="label">SCORE</span><strong id="score">0</strong></div>
+        <div><span class="label">BEST</span><strong id="best-score">0</strong></div>
+      </div>
+    </header>
+
+    <section class="screen start-screen" id="start-screen">
+      <div class="eyebrow">MENTAL ARITHMETIC // 10 SECOND ROUNDS</div>
+      <h1>How quick is<br><em>your math?</em></h1>
+      <p>Choose the right answer before time runs out.<br>One mistake ends the run.</p>
+      <div class="action-row">
+        <button class="primary-button" id="start-button">Start game <span>→</span></button>
+        <button class="secondary-button" id="start-exit-button">Exit <span>×</span></button>
+      </div>
+      <div class="developer-credit">DEVELOPED BY : AYUSH TOPPO</div>
+      <div class="start-stats"><span>+5 points per answer</span><span>•</span><span>4 operations</span></div>
+    </section>
+
+    <section class="screen countdown-screen hidden" id="countdown-screen" aria-live="assertive">
+      <div class="eyebrow">GET READY</div>
+      <h1>GAME STARTING IN</h1>
+      <div class="countdown-number" id="countdown-number">3</div>
+    </section>
+
+    <section class="screen quiz-screen hidden" id="quiz-screen">
+      <div class="quiz-meta"><span id="question-count">QUESTION 01</span><span class="timer-label"><span class="timer-dot"></span><span id="timer">10</span>s</span></div>
+      <div class="timer-track"><div id="timer-bar"></div></div>
+      <div class="question-area">
+        <div class="operation-tag" id="operation-tag">ADDITION</div>
+        <h2 id="question">8 + 7 = ?</h2>
+        <div class="answers" id="answers"></div>
+      </div>
+    </section>
+
+    <section class="screen game-over-screen hidden" id="game-over-screen">
+      <div class="result-icon">!</div>
+      <div class="eyebrow">RUN COMPLETE</div>
+      <h1>Oops ! <em>WRONG ANSWER</em></h1>
+      <p id="result-message">Nice run. Keep going to beat your best.</p>
+      <div class="final-score"><span>YOUR SCORE</span><strong id="final-score">0</strong></div>
+      <div class="action-row">
+        <button class="primary-button" id="restart-button">Play again <span>↻</span></button>
+        <button class="secondary-button" id="game-over-exit-button">Exit <span>×</span></button>
+      </div>
+    </section>
+
+    <footer>KEEP YOUR HEAD IN THE GAME <span>✦</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
