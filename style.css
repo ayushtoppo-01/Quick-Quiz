@@ -73,7 +73,9 @@ h1 em, .question-area h2 { color: var(--orange); font-style: normal; }
 .question-area h2 { margin: 22px 0 38px; font-size: clamp(52px, 9vw, 100px); line-height: 1; letter-spacing: -.07em; }
 .answers { display: grid; grid-template-columns: repeat(2, minmax(140px, 250px)); gap: 12px; }
 .answer-button { min-height: 66px; border: 1px solid var(--ink); color: var(--ink); background: rgba(244, 241, 232, .35); font: 600 22px "Space Grotesk", sans-serif; cursor: pointer; transition: background .15s, transform .15s; }
-.answer-button:hover { background: var(--mint); transform: translateY(-3px); }
+@media (hover: hover) and (pointer: fine) {
+  .answer-button:hover { background: var(--mint); transform: translateY(-3px); }
+}
 .answer-button:focus-visible, .primary-button:focus-visible, .secondary-button:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
 
 .game-over-screen { align-items: flex-start; padding: 8vh 0; }
